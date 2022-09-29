@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@maglev-training/core-ui": ["libs/core-ui/src/index.ts"],
       "@maglev/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },
