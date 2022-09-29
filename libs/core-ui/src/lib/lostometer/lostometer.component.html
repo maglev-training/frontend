@@ -1,6 +1,22 @@
-<div class="flex">
-  <span class="flex-auto">Totally Lost</span>
-  <span>Doing Great!</span>
+<div>
+  <div class="flex">
+    <span class="flex-auto">{{ lostLabel }}</span>
+    <span>{{ greatLabel }}</span>
+  </div>
+  <form [formGroup]="form">
+    <input
+      [disabled]="disabledSlider"
+      formControlName="rating"
+      class="lostometer"
+      type="range"
+      min="1"
+      max="10"
+      step="1"
+      aria-label="An Indicator of How Lost Your are from 1-10"
+    />
+    <div class="average flex flex-col" [style.margin-left.%]="average * 10">
+      <span>&#9757;</span>
+      <small>Avg {{ average / 10 | percent }}</small>
+    </div>
+  </form>
 </div>
-
-<input class="lostometer" type="range" />

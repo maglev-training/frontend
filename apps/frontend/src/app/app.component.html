@@ -1,1 +1,7 @@
-<maglev-lostometer></maglev-lostometer>
+<div class="w-96 p-10">
+  <maglev-lostometer
+    [average]="average"
+    [debounceTime]="debounce"
+    (ratingChanged)="ratingChanged($event)"
+  ></maglev-lostometer>
+</div>
